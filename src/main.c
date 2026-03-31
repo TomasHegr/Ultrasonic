@@ -104,7 +104,7 @@ int main(void)
             time = milis();
             echotime = getEchotime();
             printf("echotime: %u us   ", echotime);
-            range = (uint16_t)((uint32_t)343*echotime/2000);
+            range = (uint16_t)(((uint32_t)343*echotime+1000) /2000);  //lepší zaokrouhlení
             printf("range = %u mm\n",range);
             
         }
